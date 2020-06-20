@@ -5,51 +5,103 @@
   <meta charset="utf-8" />
   <meta name="author" content="Mike G" />
   <meta name="description" content="This is the main page of my blog site" />
-  <title>Mike's Blog</title>
+  <title>Web Developer Blog</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-  <header>
+  <!-- Grid container for main page -->
+  <div class="container">
     <nav>
-    <h1>Welcome to Mike's Blog</h1>
+      <div id="nav-title">
+        <div id="title">Web Developer Blog</div>
+      </div>
+      <ul id="nav-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="post1.html">Blog Post</a>
+        </li>
+      </ul>
     </nav>
-  </header>
 
+    <section id="post-main">
+      <div class="text-props">
+        <a href="post1.html" alt="Learn HTML" class="link">
+          <h4>#1: Learn HTML</h4>
+          <p class="post-info"><em>Mike G. | 05-31-2020</em></p>
+        </a>
+        <p>
+          To become a web developer, you have to be proficient in several areas.
+          One of the first skills you should develop is HTML. HTML is the [...]
+        </p>
+        <a href="post1.html" alt="Button Read More">
+          <div class="button">Read more</div>
+        </a>
+      </div>
+    </section>
 
-    <main>
-      <div class="card">
-        <img src="images/icon-user-male.png" alt="avatar">
-        <div class="card_info">
-          <h4><strong>Mike G</strong></h4>
-          <p>Web Developer<br>(<em>Rookie</em>)</p>
+    <section class="post" id="post-1">
+      <a href="post1.html" alt="#1: Learn HTML" class="link">
+        <div class="text-props">
+          <h4>HTML: The Lingua Franca of the Web</h4>
+          <p class="post-info"><em>Mike G. | 06-01-2020</em></p>
+        </div>
+      </a>
+    </section>
+
+    <section class="post" id="post-2">
+      <a href="#" alt="#2: Learn CSS" class="link">
+        <div class="text-props">
+          <h4>CSS is the ...</h4>
+          <p class="post-info"><em>Mike G. | 06-08-2020</em></p>
+        </div>
+      </a>
+    </section>
+
+    <section class="post" id="post-3">
+      <a href="#" alt="#3: Learn JavaScript" class="link">
+        <div class="text-props">
+          <h4>JavaScript is ...</h4>
+          <p class="post-info"><em>Mike G. | 06-15-2020</em></p>
+        </div>
+      </a>
+    </section>
+
+    <section class="post" id="post-4">
+      <a href="#" alt="#4: Putting it Together" class="link">
+        <div class="text-props">
+          <h4>JavaScript is ...</h4>
+          <p class="post-info"><em>Mike G. | 06-20-2020</em></p>
+        </div>
+      </a>
+    </section>
+
+    <section id="subscription">
+      <form action="#">
+      <h5>Subscribe to our news-letter</h5>
+      <div class="container">
+        <div class="subscription-element">
+          <input type="text" placeholder="Name" name="name" required>
+        </div>
+        <div class="subscription-element">
+          <input type="text" placeholder="Email address" name="mail" required>
+        </div>
+        <div class="subscription-element">
+          <input type="submit" value="Subscribe">
         </div>
       </div>
-
-      <article>
-        <h2><a href="post1.html">Web Developers - The New Superstars</a></h2>
-        <div class="date">
-          <p> June 1, 2020</p>
-        </div>
-        <section>
-          <p><blockquote cite="https://money.usnews.com/careers/best-jobs/web-developer">
-            Web developers are responsible for creating websites. When these artists
-            do their jobs well, everything about a site seems to fie together
-            perfectly, from the colors and graphics, to the images and special effects
-            to the navigation.</blockquote>
-
-        </p>
-      </section>
-
-      </article>
-
-
-      </article>
-    </main>
+      </form>
+    </section>
 
   <footer>
-    <p><em><strong>&copy; 2020 MAG, Inc.</strong></em></p>
+    <p><em><strong>&copy; 2020 Mike G., Inc.</strong></em></p>
+    <a href="https://www.facebook.com/"><i class="facebook"></i></a>
+    <a href="https://twitter.com/"><i class="twitter"></i></a>
+    <a href="https://www.linkedin.com/"><i class="linkedin"></i></a>
   </footer>
+  </div>
 </body>
 
 </html>
