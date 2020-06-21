@@ -1,46 +1,51 @@
-@import url('nav.css');
-@import url('typography.css');
-@import url('layout.css');
-@import url('button.css');
-@import url('footer.css');
+
+@import url("nav.css");
+@import url("footer.css");
+@import url("topology.css");
+@import url("button.css");
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(30px, auto);
-  gap: 6px;
+  grid-template-rows: minmax(60px, auto);
+  gap: 15px 15px;
   grid-template-areas:
   "nav nav"
-  "top-post top-post"
-  "subscription subscription"
-  "post-1 post-2"
+  "bl bl"
+  "top-post post-1"
+  "top-post post-2"
   "post-3 post-4"
   "ft ft";
 }
 
+
 @media (min-width: 600px) {
   .container {
     height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 60px auto auto auto 30px;
-    gap: 6px;
+    grid-template-rows: 60px 15px auto auto auto 30px;
+    gap: 15px 15px;
     grid-template-areas:
     "nav nav nav nav"
+    "bl bl bl bl"
     "top-post top-post post-1 post-1"
     "top-post top-post post-2 post-2"
-    "post-3 subscription subscription post-4"
+    "post-3 post-3 post-4 post-4"
     "ft ft ft ft";
   }
 }
 
+
 /* content */
 
-#post-main {
+#top-post {
   grid-area: top-post;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/web-design1.jpg");
+  gap: 10px 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/html5-2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -93,7 +98,7 @@
 }
 
 #post-4 {
-  grid-area: post-3;
+  grid-area: post-4;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/web-design-2.jpg");
   background-position: center;
   background-size: cover;
@@ -102,24 +107,7 @@
   padding: 0;
 }
 
-#newsletter {
-  grid-area: newsletter;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.newsletter-container {
-  display: flex;
-  flex-flow: row nowrap;
-  padding: 5px;
-}
-
-.newsletter-element {
-  width: 30%;
-}
-
-/* tile styling */
 .text-props {
   background-color: rgba(0, 0, 0, 0.5);
   min-width: 60%;
@@ -163,23 +151,6 @@
   }
 }
 
-/* subscription */
-#subscription {
-  grid-area: subscription;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.subscription-container {
-  display: flex;
-  flex-flow: row nowrap;
-  padding: 5px;
-}
-
-.subscription-element {
-  width: 30%;
-}
 
 input[type=text], input[type=submit] {
   text-align: center;
@@ -211,20 +182,3 @@ input[type=submit]:hover {
   transform: scale(0.9);
 }
 
-@media (min-width: 600px) and (max-width: 780px) {
-  .subscription-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-  }
-
-  .subscription-element {
-    width: 40%;
-  }
-
-  input[type=submit] {
-    font-size: 0.9em;
-  }
-}
