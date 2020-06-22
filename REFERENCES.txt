@@ -1,0 +1,7 @@
+REFERENCES:
+============
+https://github.com/miliberlin/Personal-Blog-Website
+https://www.w3schools.com/cssref/default.asp
+https://www.freeimages.com/
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
+
